@@ -1,5 +1,5 @@
 # Setup Cluster
-- hosts: kube-master
+- hosts: k-master
   become: yes
   tasks:
    - name: Install kubectl on Master
@@ -42,7 +42,7 @@
        join_command: "{{ join_command_raw.stdout_lines[0] }}"
 
 # Join Cluster with each kube-node
-- hosts: kube-node
+- hosts: k-node
   become: yes
   tasks:
 
