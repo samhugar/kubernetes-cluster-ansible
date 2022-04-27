@@ -1,13 +1,13 @@
 [all]
-k-master
-k-node
+kube-master
+kube-worker
 
 [all:vars]
 # Ubuntu uses python3 instead of python2, we need to set the interpreter for ansible
 ansible_python_interpreter=/usr/bin/python3
 
-[kube-master]
-k-master
+[master]
+kube-master
 
-[kube-node]
-k-node
+[workers]
+kube-worker
